@@ -2,4 +2,14 @@
 
 {% block body %}
 	<h1>New Prodcut</h1>
+
+	{{ form_start(form) }}
+
+	{{ form_row(form.name) }}
+	{{ form_row(form.description) }}
+	{{ form_row(form.size) }}
+	{{ form_row(form.save,{'label':"Save"}) }}
+	{{ form_end(form) }}
+
+
 {% endblock %}
