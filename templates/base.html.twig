@@ -10,6 +10,13 @@
 		<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"> {% block stylesheets %}{% endblock %}{% block javascripts %}{% endblock %}
 		</head>
 		<body>
+
+			{# read and display just one flash message type #}
+			{% for message in app.flashes('notice') %}
+				<div class="notice">
+					{{ message }}
+				</div>
+			{% endfor %}
 			{% block body %}{% endblock %}
 		</body>
 	</html>
